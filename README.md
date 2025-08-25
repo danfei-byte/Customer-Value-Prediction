@@ -5,7 +5,8 @@ This project predicts customer-level Average Order Value (AOV) to enable persona
 
 ## Data
 - Source: H&M transactional + product + customer tables (The source data can be found [here](https://www.kaggle.com/code/gpreda/h-m-eda-and-prediction/notebook) on Kaggle).
-- Sampling: last 1 year of data; random sample of ~50,000 rows for tractability. 
+- Sampling: last 1 year of data; random sample of ~50,000 rows for tractability.
+- Feature Engineering (summary):
   - **Date integration:** Joined three source tables — transactions, customers, and products — using customer_id and article_id as keys to create a unified customer-level dataset.
   - **Category redefinition:** Re-engineered the product_group_name variable by combining information from product_group_name, product_type_name, and department_name. This ensured that product categories had a clearer granularity, making them easier to interpret and more actionable for analysis (the original groupings were too broad, with dissimilar items collapsed into the same category).
   - **Customer-level aggregation:** Aggregated transactions to the customer level to construct modeling features.
